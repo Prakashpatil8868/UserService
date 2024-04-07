@@ -82,21 +82,21 @@ public class SecurityConfig {
         return http.build();
     }
 
-//    @Bean
-//    public UserDetailsService userDetailsService() {
-//        UserDetails userDetails = User.builder()
-//                .username("user")
-//                .password("$2a$12$D7aDkYdMA.aqiAR4op.vMuooFQ8QabwUtNsUHH5UabRrU/HZYQYCO")
-//                .roles("USER")
-//                .build();
-//
-//        return new InMemoryUserDetailsManager(userDetails);
-//    }
+    @Bean
+    public UserDetailsService userDetailsService() {
+        UserDetails userDetails = User.builder()
+                .username("user")
+                .password("$2a$12$qrFVRtXth8qBc6jvzQQKc.I6B1WiVZDNZh3FJ2ZU4BqNKbrOKSIoK")
+                .roles("USER")
+                .build();
+
+        return new InMemoryUserDetailsManager(userDetails);
+    }
 
     @Bean
     public RegisteredClientRepository registeredClientRepository() {
         RegisteredClient oidcClient = RegisteredClient.withId(UUID.randomUUID().toString())
-                .clientId("oidc-client")
+                .clientId("postman-client")
                 .clientSecret("$2a$12$ot21T8YVnx5Oi7GLDXbYuOjcw7MEs6mSUkOsyWaQ2odhDKtWvEcpi")
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
