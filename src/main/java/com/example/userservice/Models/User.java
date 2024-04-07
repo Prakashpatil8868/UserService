@@ -15,7 +15,7 @@ public class User extends BaseModel{
     private String name;
     private String email;
     private String hashPassword;
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
     private boolean isEmailVerified;
 }

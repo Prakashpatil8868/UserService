@@ -15,16 +15,18 @@ import java.util.UUID;
 
 @SpringBootTest
 class UserServiceApplicationTests {
+
     @Autowired
     JpaRegisteredClientRepository jpaRegisteredClientRepository;
     @Test
     void contextLoads() {
     }
+
     @Test
     public void registerPostManAsRegistrredClientToMyDB(){
         RegisteredClient oidcClient = RegisteredClient.withId(UUID.randomUUID().toString())
-                .clientId("postman-client")
-                .clientSecret("$2a$12$ot21T8YVnx5Oi7GLDXbYuOjcw7MEs6mSUkOsyWaQ2odhDKtWvEcpi")
+                .clientId("postman-client3")
+                .clientSecret("$2a$12$4aXPCPqqV3/UgFz.nlsj..4thB7kvyL8MO6IdXo4TRsEG.mDgqTui")
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)

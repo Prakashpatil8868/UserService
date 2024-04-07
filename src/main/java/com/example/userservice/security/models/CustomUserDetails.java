@@ -10,22 +10,22 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 @JsonDeserialize
-
 public class CustomUserDetails implements UserDetails {
 
   //private User user;
-private String password;
-private String username;
-private boolean accountNonExpired;
-private boolean accountNonLocked;
-private boolean credentialsNonExpired;
-private boolean enabled;
-private List<CustomGrantedAuthority>authorities;
-private Long userId;
+    private String password;
+    private String username;
+    private boolean accountNonExpired;
+    private boolean accountNonLocked;
+    private boolean credentialsNonExpired;
+    private boolean enabled;
+    private List<CustomGrantedAuthority>authorities;
+    private Long userId;
 
-public CustomUserDetails(){
+    public CustomUserDetails(){
 
-}
+    }
+
     public CustomUserDetails(User user) {
         // this.user=user;
         this.username = user.getName();
