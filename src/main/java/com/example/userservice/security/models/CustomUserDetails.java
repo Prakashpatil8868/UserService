@@ -21,6 +21,7 @@ private boolean accountNonLocked;
 private boolean credentialsNonExpired;
 private boolean enabled;
 private List<CustomGrantedAuthority>authorities;
+private Long userId;
 
 public CustomUserDetails(){
 
@@ -40,6 +41,7 @@ public CustomUserDetails(){
             authorities.add(customGrantedAuthority);
         }
         this.authorities=authorities;
+        this.userId= user.getId();
     }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -50,6 +52,10 @@ public CustomUserDetails(){
     @Override
     public String getPassword() {
         return password;
+    }
+
+    public Long getUserId(){
+    return userId;
     }
 
     @Override

@@ -7,6 +7,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class ConfigurationClass {
 @Bean
     public BCryptPasswordEncoder createdBcryptEncoder(){
-        return new BCryptPasswordEncoder(20);
+        return new BCryptPasswordEncoder(12);
     }
 }
