@@ -13,18 +13,18 @@ import java.util.List;
 
 public class CustomUserDetails implements UserDetails {
 
-  //private User user;
-private String password;
-private String username;
-private boolean accountNonExpired;
-private boolean accountNonLocked;
-private boolean credentialsNonExpired;
-private boolean enabled;
-private List<CustomGrantedAuthority>authorities;
+    //private User user;
+    private String password;
+    private String username;
+    private boolean accountNonExpired;
+    private boolean accountNonLocked;
+    private boolean credentialsNonExpired;
+    private boolean enabled;
+    private List<CustomGrantedAuthority>authorities;
 
-public CustomUserDetails(){
+    public CustomUserDetails(){
 
-}
+    }
     public CustomUserDetails(User user) {
         // this.user=user;
         this.username = user.getName();

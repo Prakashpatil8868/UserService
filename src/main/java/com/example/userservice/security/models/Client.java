@@ -1,6 +1,5 @@
 package com.example.userservice.security.models;
 
-
 import java.time.Instant;
 
 import jakarta.persistence.Column;
